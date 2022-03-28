@@ -36,8 +36,8 @@ def data_plot():
     y = []
     for d in data:
         if d:
-            x.append(float(d[0]))
-            y.append(float(d[1]))
+            x.append(round(float(d[0]),2))
+            y.append(round(float(d[1]),2))
     xdata.append(x)
     ydata.append(y)
     # print(round(xdata[0]-xdata[1], 2))
@@ -58,5 +58,5 @@ def xydata():
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
-            port=int(os.environ.get('PORT', '5572')),
+            port=int(os.environ.get('PORT', '5705')),
             debug=True)
